@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>GlobalVision form review</title>
+	<meta name="keywords" content="GlobalVision form review">
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<!-- Include media queries -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--- Component CSS -->
+	<link rel="stylesheet" href="stylesheets/main-style.css">
+</head>
+<body>
+	<header>
+		<div class="wrapper">
+			<div class="border-line"></div>
+			<h1 class="logo">
+				<a href="http://globalvision.name/">
+					<img src="images/logo.png" alt="Global Vision">
+				</a>
+			</h1>
+			<h2 class="for-gift-title">
+				If you like or don’t like your new website, please tell us and get 
+				<a href="#">Gift</a> 
+				from Global Vision. 
+			</h2>
+		</div>
+	</header>
+	<section class="main-content">
+		<div class="wrapper">
+			<div class="form-wrapper">
+				<form id="review-form" method="post">
+					<div class="form-row">
+						<label for="name">Name:</label>
+						<input autocomplete="off" id="name" type="text" name="name">
+					</div>
+					<div class="form-row">
+						<label for="website">Website:</label>
+						<input autocomplete="off" id="website" type="text" name="website">
+					</div>
+					<div class="form-row">
+						<label for="like-message">What do you like?</label>
+						<textarea id="like-message"></textarea>
+					</div>
+					<div class="form-row dislake-message">
+						<label for="dislake-message">What you don’t like?</label>
+						<textarea id="dislake-message"></textarea>
+					</div>
+					<h3 class="date">
+						Date: 
+						<span>oct. 17.2016</span>
+					</h3>
+					<input id="send-btn" type="submit" name="send" value="send">
+					<h4 class="question">
+						<span class="label-title"><span>Can we use this</span> <span>reviews on our</span> <span>web site?</span></span>
+						<div class="squaredFour">
+						<input id="question" type="checkbox" name="question">
+						<label for="question"></label>
+						</div>
+					</h4>
+				</form>
+			</div>
+		</div>
+	</section>
+	<footer></footer>
+</body>
+</html>

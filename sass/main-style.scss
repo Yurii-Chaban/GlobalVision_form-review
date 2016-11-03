@@ -1,0 +1,309 @@
+ @import "compass/reset";
+
+
+ @font-face {
+ 	font-family: 'HelveticaNeueCyr';
+ 	src: url('../resources/HelveticaNeueCyr/Roman/HelveticaNeueCyr-Roman.eot');
+ 	src: url('../resources/HelveticaNeueCyr/Roman/HelveticaNeueCyr-Roman.woff2') format('woff2'),
+ 	url('../resources/HelveticaNeueCyr/Roman/HelveticaNeueCyr-Roman.woff') format('woff'),
+ 	url('../resources/HelveticaNeueCyr/Roman/HelveticaNeueCyr-Roman.ttf') format('truetype'),
+ 	url('../resources/HelveticaNeueCyr/Roman/HelveticaNeueCyr-Roman.svg#HelveticaNeueCyr-Roman') format('svg'),
+ 	url('../resources/HelveticaNeueCyr/Roman/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype');
+ 	font-weight: normal;
+ 	font-style: normal;
+ }
+
+ @font-face {
+ 	font-family: 'HelveticaNeueCyr';
+ 	src: url('../resources/HelveticaNeueCyr/Medium/HelveticaNeueCyr-Medium.eot');
+ 	src: url('../resources/HelveticaNeueCyr/Medium/HelveticaNeueCyr-Medium.woff2') format('woff2'),
+ 	url('../resources/HelveticaNeueCyr/Medium/HelveticaNeueCyr-Medium.woff') format('woff'),
+ 	url('../resources/HelveticaNeueCyr/Medium/HelveticaNeueCyr-Medium.ttf') format('truetype'),
+ 	url('../resources/HelveticaNeueCyr/Medium/HelveticaNeueCyr-Medium.svg#HelveticaNeueCyr-Medium') format('svg'),
+ 	url('../resources/HelveticaNeueCyr/Medium/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype');
+ 	font-weight: normal;
+ 	font-style: normal;
+ }
+
+ $HelveticaNeueCyr: "HelveticaNeueCyr", sans-serif;
+
+ @mixin transition {
+ 	-webkit-transition: all .3s ease-in-out;
+ 	-moz-transition: all .3s ease-in-out;
+ 	-o-transition: all .3s ease-in-out;
+ 	transition: all .3s ease-in-out;
+ }
+ @mixin border-box {
+ 	-webkit-box-sizing: border-box;
+ 	-moz-box-sizing: border-box;
+ 	-ms-box-sizing: border-box;
+ 	box-sizing: border-box;
+ }
+
+
+ .wrapper {
+ 	max-width: 964px;
+ 	width: 100%;
+ 	margin: 0 auto;
+ 	padding: 0 15px;
+ 	@include border-box;
+ }
+
+ header {
+ 	@include border-box;
+ 	width: 100%;
+
+ 	.border-line {
+ 		width: 141px;
+ 		height: 8px;
+ 		margin: 0 auto;
+ 		background-color: #f37835;
+ 	}
+
+ 	.logo {
+ 		@include border-box;
+ 		margin: 20px auto 25px;
+ 		max-width: 251px;
+ 		max-height: 38px;
+ 		overflow: hidden;
+
+ 		img {
+ 			max-width: 100%;
+ 			height: auto;
+ 		}
+ 	}
+
+ 	.for-gift-title {
+ 		margin: 0 auto;
+ 		text-align: center;
+ 		color: #f37835;
+ 		font: 500 25px / 28px $HelveticaNeueCyr;
+
+ 		a {
+ 			color: #26a6a5;
+ 			text-decoration: none;
+ 		}
+ 	}
+ }
+
+ .main-content {
+ 	@include border-box;
+ 	padding: 35px 0 40px;
+
+ 	.form-wrapper {
+ 		@include border-box;
+ 		width: 100%;
+ 	}
+
+ 	#review-form {
+ 		@include border-box;
+ 		overflow: hidden;
+
+ 		.form-row {
+ 			margin: 0 auto 25px;
+
+ 			label {
+ 				display: block;
+ 				margin: 0 0 8px 9px;
+ 				color: #5d5d5d;
+ 				font: 400 22px / 26px $HelveticaNeueCyr;
+ 				text-transform: uppercase;
+ 			}
+
+ 			#name,
+ 			#website,
+ 			#like-message,
+ 			#dislake-message {
+ 				outline: none;
+ 				resize: none;
+ 				color: #5d5d5d;
+ 				font: 400 18px / 20px $HelveticaNeueCyr;
+ 				background-color: #f9f9f9;
+ 				border: 1px solid lightgrey;
+ 				@include border-box;
+ 			}
+
+ 			#name,
+ 			#website {
+ 				display: block;
+ 				width: 100%;
+ 				height: 44px;
+ 				padding-left: 10px;
+ 			}
+
+ 			#like-message,
+ 			#dislake-message {
+ 				padding: 10px 0 0 10px;
+ 				width: 100%;
+ 				height: 306px;
+ 			}
+ 		}
+
+ 		.date {
+ 			color: #f37835;
+ 			font: 400 18px / 20px $HelveticaNeueCyr;
+ 		}
+
+ 		#send-btn {
+ 			display: block;
+ 			float: right;
+ 			width: 112px;
+ 			height: 49px;
+ 			margin: 17px 0 37px;
+ 			color: white;
+ 			text-align: center;
+ 			font: 400 18px / 49px $HelveticaNeueCyr;
+ 			text-transform: uppercase;
+ 			background-color: #f37835;
+ 			border: inherit;
+ 			cursor: pointer;
+ 		}
+
+ 		.question {
+ 			clear: both;
+ 			.label-title {
+ 				color: #5d5d5d;
+ 				font: 400 22px / 30px $HelveticaNeueCyr;
+ 				text-transform: uppercase;
+ 				span {
+ 					display: inline-block;
+ 				}
+ 			}
+
+ 			.squaredFour {
+ 				float: right;
+ 				width: 29px;
+ 				height: 30px;
+ 				position: relative;
+ 				margin: 0 15px 3px 10px;
+ 				display: inline-block;
+ 				label {
+ 					cursor: pointer;
+ 					position: absolute;
+ 					top: 0;
+ 					left: 0;
+ 					width: 29px;
+ 					height: 29px;
+ 					background-color: #f9f9f9;
+ 					border: 2px solid lightgrey;
+ 					&:after {
+ 						content: '';
+ 						width: 14px;
+ 						height: 6px;
+ 						position: absolute;
+ 						top: 8px;
+ 						left: 7px;
+ 						border: 4px solid #5d5d5d;
+ 						border-top: none;
+ 						border-right: none;
+ 						background: transparent;
+ 						opacity: 0;
+ 						transform: rotate(-45deg);
+ 						border-radius: 3px;
+ 					}
+ 				}
+ 				input[type=checkbox] {
+ 					visibility: hidden;
+ 					&:checked + label:after {
+ 						opacity: 1;
+ 					}
+ 				}    
+ 			}
+ 		}
+ 	}
+ }
+ // Media Style
+ @media (min-width: 1024px) {
+ 	header {
+ 		.border-line {
+ 			width: 222px;
+ 			height: 13px;
+ 		}
+
+ 		.logo {
+ 			max-width: 389px;
+ 			max-height: 58px;
+ 			margin: 29px auto 32px;
+ 		}
+
+ 		.for-gift-title {
+ 			font: 500 27px/37px $HelveticaNeueCyr;
+ 			letter-spacing: 1px;
+ 			max-width: 753px;
+ 		}
+ 	}
+
+ 	.main-content {
+ 		padding: 48px 0 40px;
+ 		#review-form {
+ 			clear: both;
+ 			.form-row {
+ 				margin: 0 auto 35px;
+
+ 				label {
+ 					display: inline-block;
+ 					margin: 15px 0 0 0;
+ 				}
+
+ 				label[for="like-message"],
+ 				label[for="dislake-message"] {
+ 					display: block;
+ 					margin: 0 auto 17px;
+ 					text-align: center;
+ 				}
+
+ 				label[for="like-message"] {
+ 					padding-top: 5px;
+ 				}
+
+ 				#name,
+ 				#website {
+ 					width: 87%;
+ 					float: right;
+ 				}
+
+ 				#like-message,
+ 				#dislake-message {
+ 					height: 222px;
+ 				}
+
+ 				.date {
+ 					font-size: 16px;
+ 				}
+
+ 				#send-btn {
+ 					margin: 17px 0 33px;
+ 				}
+ 			}
+
+ 			.dislake-message {
+ 				margin: 0 auto 31px;
+ 			}
+
+ 			.question {
+ 				overflow: hidden;
+
+ 				.label-title {
+ 					float: left;
+ 				}
+
+ 				.squaredFour {
+ 					float: left;
+ 					margin: 0 15px 3px 17px;
+ 					width: 24px;
+ 					height: 27px;
+
+ 					label {
+ 						width: 24px;
+ 						height: 26px;
+
+ 						&:after {
+ 							top: 6px;
+ 							left: 5px;
+ 						}
+ 					}
+ 				}
+ 			}
+ 		}
+ 	}
+ }
